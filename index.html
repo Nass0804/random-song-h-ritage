@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound</title>
+    <script>
+        // Liste des identifiants YouTube
+        const sounds = [
+            "o2Tz1yV48NQ", // Vidéo 1
+            "L_1Z_WcF9Y4",  // Vidéo 2
+            "0OrKMaeQUx0", // Vidéo 3
+            "L9oEcWFjF3M", // Vidéo 4 
+            "MjlkYxP2OLg"  // Vidéo 5
+        ];
+
+        // Fonction pour sélectionner une vidéo aléatoire
+        window.onload = () => {
+            const randomIndex = Math.floor(Math.random() * sounds.length);
+            const iframe = document.getElementById("youtubePlayer");
+            iframe.src = `https://www.youtube.com/embed/${sounds[randomIndex]}?autoplay=1`;
+        };
+    </script>
+</head>
+<body>
+    <h1>Random Sound Player</h1>
+    <iframe id="youtubePlayer" width="560" height="315" 
+        src="https://www.youtube.com/embed/EjBR8con4dU" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
